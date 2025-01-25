@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kantor Advokat MNRNCO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1><span class="highlight">MNRNCO</span><br><span class="subheading">Layanan Hukum</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#cases">Daftar Perkara</a></li>
+                    <li><a href="#activities">Kegiatan</a></li>
+                    <li><a href="#jurisprudence">Yurisprudensi</a></li>
+                    <li><a href="#news">Berita</a></li>
+                    <li><a href="#careers">Karir</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Slider Section -->
+    <section id="home" class="slider">
+        <div class="slider-container">
+            <!-- Slider Images -->
+            <div class="slides">
+                <div class="slide fade">
+                    <img src="gambar/img1.JFIF" alt="gambar 1">
+                </div>
+                <div class="slide fade">
+                    <img src="gambar/img2.JFIF" alt="gambar 2">
+                </div>
+                <div class="slide fade">
+                    <img src="gambar/img3.PNG" alt="gambar 3">
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah kantor hukum yang menyediakan layanan hukum profesional dengan pendekatan yang responsif dan
+            solutif. Dengan pengalaman bertahun-tahun dalam menangani berbagai kasus, kami menawarkan solusi yang tepat
+            untuk setiap masalah hukum Anda.</p>
+    </section>
+
+    <!-- Daftar Perkara Section -->
+    <section id="cases" class="daftarPerkara">
+        <h2>Daftar Perkara</h2>
+        <div id="tableContainer">
+            <!-- Data akan ditampilkan di sini -->
+            <p>Loading data...</p>
+        </div>
+    </section>
+
+    <script>
+        // URL dari aplikasi web Google Apps Script Anda
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbycV9Fe29sNDu7NM-qxE2Mq-WpSIeNPqRaHEC22m7hMBMTvTHNumZvwrBOl8NUhjuYoLQ/exec'; // Ganti dengan URL yang diberikan oleh Google Apps Script
+
+        // Fungsi untuk mengambil data dari Google Apps Script
+        function fetchData() {
+            fetch(SCRIPT_URL)
+                .then(response => response.text())  // Ambil data sebagai HTML
+                .then(data => {
+                    document.getElementById('tableContainer').innerHTML = data;  // Masukkan data ke dalam div
+                })
+                .catch(error => {
+                    console.error('Error fetching data: ', error);
+                    document.getElementById('tableContainer').innerHTML = '<p>Gagal memuat data.</p>';
+                });
+        }
+
+        // Panggil fungsi fetchData saat halaman dimuat
+        window.onload = fetchData;
+    </script>
+
+
+    <!-- Kegiatan Section -->
+    <section id="activities" class="section">
+        <h2>Kegiatan Kami</h2>
+        <p>Kami aktif dalam berbagai kegiatan hukum dan sosial, seperti seminar, pelatihan hukum, dan kegiatan
+            masyarakat untuk meningkatkan kesadaran hukum di Indonesia.</p>
+    </section>
+
+    <!-- Yurisprudensi Section -->
+    <section id="jurisprudence" class="section">
+        <h2>Yurisprudensi</h2>
+        <p>Yurisprudensi terbaru yang relevan dengan perkembangan hukum di Indonesia. Kami mengumpulkan dan menyediakan
+            informasi tentang keputusan-keputusan pengadilan yang penting dan aplikatif dalam praktik hukum.</p>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section">
+        <h2>Berita Terbaru</h2>
+        <p>Berita terbaru seputar dunia hukum, kebijakan pemerintah, dan kasus-kasus penting yang dapat mempengaruhi
+            dunia hukum dan klien kami.</p>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="section">
+        <h2>Karir Bersama Kami</h2>
+        <p>Jika Anda seorang profesional yang berkompeten dan ingin berkarir bersama kami, kami mengundang Anda untuk
+            bergabung dalam tim kami. Kami mencari individu yang berkomitmen dan memiliki integritas tinggi.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami untuk informasi lebih lanjut atau jadwalkan konsultasi dengan tim ahli kami:</p>
+        <p>Email: <a href="mailto:kontak@mnrnco.com">kontak@mnrnco.com</a></p>
+        <p>Alamat: Jl. Hukum No. 123, Jakarta, Indonesia</p>
+        <p>Telepon: +62 123 456 7890</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Layanan Hukum MNRNCO. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

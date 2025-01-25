@@ -1,0 +1,28 @@
+{
+    "cases": [
+        {
+            "no": "001",
+            "nomor_perkara": "A1234/2025",
+            "pengadilan": "Pengadilan Negeri Jakarta Pusat",
+            "advokat": "John Doe, SH.",
+            "klasifikasi_perkara": "Perdata",
+            "perkembangan": "Pemeriksaan saksi-saksi"
+        },
+        {
+            "no": "002",
+            "nomor_perkara": "B5678/2025",
+            "pengadilan": "Pengadilan Negeri Surabaya",
+            "advokat": "Jane Smith, SH.",
+            "klasifikasi_perkara": "Pidana",
+            "perkembangan": "Sidang pertama selesai"
+        },
+        {
+            "no": "003",
+            "nomor_perkara": "C9101/2025",
+            "pengadilan": "Pengadilan Negeri Bandung",
+            "advokat": "Ali Rahman, SH.",
+            "klasifikasi_perkara": "Perburuhan",
+            "perkembangan": "Penyelidikan awal oleh polisi"
+        }
+    ]
+}
